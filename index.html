@@ -6,9 +6,83 @@
     <script src="script.js"></script>
     <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
     <script type="text/javascript">
-        var parser, xmldoc;
-        var text = "AWSAccessKeyId"
-    </script>
+		var parser, xmlDoc;
+		var text = "<CartCreateResponse
+    xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">
+    <OperationRequest>
+        <HTTPHeaders>
+            <Header Name="UserAgent" Value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38"/>
+        </HTTPHeaders>
+        <RequestId>e139ecc8-be62-40fa-90e2-669cbbe12c2a</RequestId>
+        <Arguments>
+            <Argument Name="AWSAccessKeyId" Value="AKIAI7HDVG5KASF2ZHCA"/>
+            <Argument Name="AssociateTag" Value="barelyfunctio-20"/>
+            <Argument Name="Item.1.ASIN" Value="B01MUBHWKW"/>
+            <Argument Name="Item.1.Quantity" Value="1"/>
+            <Argument Name="Operation" Value="CartCreate"/>
+            <Argument Name="ResponseGroup" Value="Cart"/>
+            <Argument Name="Service" Value="AWSECommerceService"/>
+            <Argument Name="Timestamp" Value="2017-10-14T18:03:00.000Z"/>
+            <Argument Name="Signature" Value="oEG+M3+gaOfi4Bt43m+pTuQQoEYeX8XRaHkIgfnvmMI="/>
+        </Arguments>
+        <RequestProcessingTime>0.13977952</RequestProcessingTime>
+    </OperationRequest>
+    <Cart>
+        <Request>
+            <IsValid>True</IsValid>
+            <CartCreateRequest>
+                <Items>
+                    <Item>
+                        <ASIN>B01MUBHWKW</ASIN>
+                        <Quantity>1</Quantity>
+                    </Item>
+                </Items>
+                <ResponseGroup>Cart</ResponseGroup>
+            </CartCreateRequest>
+        </Request>
+        <CartId>146-4953242-9766852</CartId>
+        <HMAC>CSwA656DPNJCCp/i4C4wQDEx+ks=</HMAC>
+        <URLEncodedHMAC>CSwA656DPNJCCp%2Fi4C4wQDEx%2Bks%3D</URLEncodedHMAC>
+        <PurchaseURL>https://www.amazon.com/gp/cart/aws-merge.html?cart-id=146-4953242-9766852&associate-id=barelyfunctio-20&hmac=CSwA656DPNJCCp%2Fi4C4wQDEx%2Bks%3D&SubscriptionId=AKIAI7HDVG5KASF2ZHCA&MergeCart=False</PurchaseURL>
+        <SubTotal>
+            <Amount>1299</Amount>
+            <CurrencyCode>USD</CurrencyCode>
+            <FormattedPrice>$12.99</FormattedPrice>
+        </SubTotal>
+        <CartItems>
+            <SubTotal>
+                <Amount>1299</Amount>
+                <CurrencyCode>USD</CurrencyCode>
+                <FormattedPrice>$12.99</FormattedPrice>
+            </SubTotal>
+            <CartItem>
+                <CartItemId>C1KEJF7Z0FOXA8</CartItemId>
+                <ASIN>B01MUBHWKW</ASIN>
+                <SellerNickname>Russell Stover Chocolates</SellerNickname>
+                <Quantity>1</Quantity>
+                <Title>Russell Stover Milk Chocolate Assortment, 16 oz. Box</Title>
+                <ProductGroup>Grocery</ProductGroup>
+                <Price>
+                    <Amount>1299</Amount>
+                    <CurrencyCode>USD</CurrencyCode>
+                    <FormattedPrice>$12.99</FormattedPrice>
+                </Price>
+                <ItemTotal>
+                    <Amount>1299</Amount>
+                    <CurrencyCode>USD</CurrencyCode>
+                    <FormattedPrice>$12.99</FormattedPrice>
+                </ItemTotal>
+            </CartItem>
+        </CartItems>
+    </Cart>
+</CartCreateResponse>";
+
+		parser = new DOMParser();
+		xmlDoc = parser.parseFromString(PurchaseURL,"text/xml");
+
+		document.getElementById("demo").innerHTML =
+		xmlDoc.getElementsByTagName("PurchaseURL")[0].childNodes[0].nodeValue;
+		    </script>
   </head>
 
   <body>
