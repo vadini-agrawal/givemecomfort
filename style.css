@@ -23,8 +23,8 @@ a.button {
   text-decoration: none;
   color: initial;
   position: fixed; /* or absolute */
-  top: 20%;
-  left: 20%;
+  top: 15%;
+  left: 15%;
   width: 400px;
   height: 300px;
 }
