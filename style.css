@@ -38,9 +38,9 @@ a.button {
   padding: 50px;
   text-align: center;
   line-height: 300px;
-  /*display: inline-block;*/
+  display: inline-block;
   vertical-align: middle;
-  /*line-height: normal;*/
+  line-height: normal;
 }
 
 /*Simple reset*/
