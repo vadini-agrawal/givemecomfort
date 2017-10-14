@@ -26,19 +26,7 @@
 
         document.getElementById("url").innerHTML=
         xmlDoc.getElementsByTagName("PurchaseURL")[0].childNodes[0].nodeValue; */
-        function myFunction(xml) {
-		  var x, xmlDoc, txt;
-		  xmlDoc = xml.xmldoc;
-		  txt = "";
-		  x = xmlDoc.getElementsByTagName("PurchaseURL");
-		  for (var i = 0, len = x.length; i < len; i++){
-		  	if (x[i] == "&"){
-		  		var res = str.replace("&", "&amp;");
-		  	}
-		  }
-		  txt = childNodes[0].nodeValue;
-		  document.getElementById("url").innerHTML = txt;
-		}
+
     </script>
 
 
@@ -47,7 +35,22 @@
   <body>
     <h1>Comforts!!!</h1>
     <p>This website will make you happy!</p>
-    <span id="url"></span>
+    <script type="text/javascript">
+        function myFunction(xml) {
+          var x, xmlDoc, txt;
+          xmlDoc = xml.xmldoc;
+          txt = "";
+          x = xmlDoc.getElementsByTagName("PurchaseURL");
+          for (var i = 0, len = x.length; i < len; i++){
+            if (x[i] == "&"){
+                var res = x.replace("&", "&amp;");
+            }
+          }
+          txt = childNodes[0].nodeValue;
+          document.getElementById("url").innerHTML = txt;
+        }
+    </script>
+    <p id="url"></p>
     <div class="thing">
  		<a href= https://www.amazon.com/gp/cart/aws-merge.html?cart-id=134-4511208-3543748&associate-id=barelyfunctio-20&hmac=eRnrOzAqdT9L9Z1O1AHSduu2ciI%3D&SubscriptionId=AKIAJZM2YE25UECK34PQ&MergeCart=False class="button"> Make Me Happy </a>
  	</div>
