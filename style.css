@@ -17,7 +17,7 @@ body, html {
     background-size: cover;
 }
 
-img:hover {
+/*img:hover {
   -webkit-filter: grayscale(0%);
   -webkit-transition: .5s ease-in-out;
   -moz-filter: grayscale(0%);
