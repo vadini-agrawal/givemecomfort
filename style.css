@@ -41,6 +41,7 @@ a.button {
   display: inline-block;
   vertical-align: middle;
   background-color: #FFFF66;
+  -webkit-background-color: #FFFF66;
   /*line-height: normal;*/
 }
 
