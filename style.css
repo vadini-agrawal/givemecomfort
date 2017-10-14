@@ -1,10 +1,10 @@
 /* Styles go here */
-body {
-  background: url("sadwater.jpeg") no-repeat center center fixed; 
+/*body {
+  background: url("sadwater.jpeg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover; 
-}
+  background-size: cover;
+}*/
 
 img:hover {
   -webkit-filter: grayscale(0%);
@@ -13,13 +13,19 @@ img:hover {
   -moz-transition: .5s ease-in-out;
   -o-filter: grayscale(0%);
   -o-transition: .5s ease-in-out;
-} 
+}
 
 img {
   -webkit-filter: grayscale(100%);
   -webkit-transition: .5s ease-in-out;
-  -moz-filter: grayscale(100%); 
+  -moz-filter: grayscale(100%);
   -moz-transition: .5s ease-in-out;
-  -o-filter: grayscale(100%); 
+  -o-filter: grayscale(100%);
   -o-transition: .5s ease-in-out;
-} 
+}
+
+#Library {
+   background-image: url('LibraryTransparent.png');
+   height: 70px;
+   width: 120px;
+}
