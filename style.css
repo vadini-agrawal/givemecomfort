@@ -17,17 +17,12 @@ div.thing {
 
 a.button {
   position: fixed; /* or absolute */    /* center the element */
-  color: #FFFF66;
   right: 0;
   left: 0;
   top: 180px;
   bottom: 200px;
   margin-right: auto;
   margin-left: auto;
-  /*margin-right: auto;
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: auto;*/
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
