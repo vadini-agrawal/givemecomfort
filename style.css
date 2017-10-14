@@ -25,10 +25,10 @@ a.button {
   position: fixed; /* or absolute */
   position: fixed;
     /* center the element */
-    right: 0;
-    left: 0;
-    margin-right: auto;
-    margin-left: auto;
+  right: 0;
+  left: 150;
+  margin-right: auto;
+  margin-left: auto;
   width: 400px;
   height: 300px;
 }
