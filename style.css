@@ -25,6 +25,10 @@ a.button {
   position: fixed; /* or absolute */
   top: 50%;
   left: 50%;
+  max-width: 15%;
+  min-width: 15%;
+  max-height: 10%;
+  min-height: 10%;
 }
 
 /*Simple reset*/
