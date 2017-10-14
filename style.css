@@ -16,6 +16,7 @@ div.thing {
 }
 
 a.button {
+  border-radius: 20px; 
   position: fixed; /* or absolute */    /* center the element */
   right: 0;
   left: 0;
@@ -32,7 +33,6 @@ a.button {
   appearance: button;
   text-decoration: none;
   color: initial;
-  border-radius: 20px; 
   width: 400px;
   height: 300px;
 }
