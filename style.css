@@ -1,4 +1,11 @@
 /* Styles go here */
+body {
+  background: url("sadwater.jpeg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; 
+}
+
 img:hover {
   -webkit-filter: grayscale(0%);
   -webkit-transition: .5s ease-in-out;
