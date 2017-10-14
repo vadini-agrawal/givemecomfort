@@ -41,6 +41,7 @@ a.button {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
+  background-color: #FFFF66;
 }
 
 /*Simple reset*/
