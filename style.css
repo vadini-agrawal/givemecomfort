@@ -22,9 +22,6 @@ a.button{
     padding: 0;
 }
 
-canvas {
-    display: block;
-}
 
 /*img:hover {
   -webkit-filter: grayscale(0%);
