@@ -17,6 +17,7 @@ div.thing {
 
 a.button {
   position: fixed; /* or absolute */    /* center the element */
+  color: #FFFF66;
   right: 0;
   left: 0;
   top: 180px;
@@ -41,7 +42,6 @@ a.button {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
-  background-color: #FFFF66;
 }
 
 /*Simple reset*/
