@@ -23,8 +23,12 @@ a.button {
   text-decoration: none;
   color: initial;
   position: fixed; /* or absolute */
-  top: 30%;
-  left: 30%;
+  position: fixed;
+    /* center the element */
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
   width: 400px;
   height: 300px;
 }
