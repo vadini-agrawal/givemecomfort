@@ -34,7 +34,8 @@ a.button {
   color: initial;
   width: 400px;
   height: 300px;
-  padding: 80px;
+  padding: 150px;
+  font-size: 30px; 
   text-align: center;
   border-radius: 20px; 
 }
