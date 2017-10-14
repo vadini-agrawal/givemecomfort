@@ -40,7 +40,7 @@ a.button {
   line-height: 300px;
   display: inline-block;
   vertical-align: middle;
-  color: #FFFF66;
+  background-color: #FFFF66;
   /*line-height: normal;*/
 }
 
