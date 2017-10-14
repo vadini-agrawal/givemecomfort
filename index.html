@@ -5,14 +5,36 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">
+        txt ="<Cart>"+
+        "<CartId>146-4953242-9766852</CartId>"+
+        "<HMAC>CSwA656DPNJCCp/i4C4wQDEx+ks=</HMAC>"+
+        "<PurchaseURL>https://www.amazon.com/gp/cart/aws-merge.html?cart-id=146-4953242-9766852&amp;associate-id=barelyfunctio-20&amp;hmac=CSwA656DPNJCCp%2Fi4C4wQDEx%2Bks%3D&amp;SubscriptionId=AKIAI7HDVG5KASF2ZHCA&amp;MergeCart=False</PurchaseURL>"+
+        "</Cart>";
+
+        if (window.DOMParser)
+        {
+        parser=new DOMParser();
+        xmldoc=parser.parseFromString(txt,"text/xml");
+        }
+        else // Internet Explorer
+        {
+        xmldoc=new ActiveXObject("Microsoft.XMLDOM");
+        xmldoc.async=false;
+        xmldoc.loadXML(txt);
+        }
+
+        document.getElementById("url").innerHTML=
+        xmlDoc.getElementsByTagName("PurchaseURL")[0].childNodes[0].nodeValue;
+
+    </script>
 
   </head>
 
   <body>
     <h1>Comforts!!!</h1>
     <p>This website will make you happy!</p>
-    <div class="bg"></div>
-
+    <span id="url"></span>
  	<a href="https://www.amazon.com/gp/cart/aws-merge.html?cart-id=146-4953242-9766852&associate-id=barelyfunctio-20&hmac=CSwA656DPNJCCp%2Fi4C4wQDEx%2Bks%3D&SubscriptionId=AKIAI7HDVG5KASF2ZHCA&MergeCart=False" class="button"> Make Me Happy </a>
 
 

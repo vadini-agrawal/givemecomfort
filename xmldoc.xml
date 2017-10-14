@@ -35,7 +35,7 @@
         <CartId>146-4953242-9766852</CartId>
         <HMAC>CSwA656DPNJCCp/i4C4wQDEx+ks=</HMAC>
         <URLEncodedHMAC>CSwA656DPNJCCp%2Fi4C4wQDEx%2Bks%3D</URLEncodedHMAC>
-        <PurchaseURL>https://www.amazon.com/gp/cart/aws-merge.html?cart-id=146-4953242-9766852&associate-id=barelyfunctio-20&hmac=CSwA656DPNJCCp%2Fi4C4wQDEx%2Bks%3D&SubscriptionId=AKIAI7HDVG5KASF2ZHCA&MergeCart=False</PurchaseURL>
+        <PurchaseURL>https://www.amazon.com/gp/cart/aws-merge.html?cart-id=146-4953242-9766852&amp;associate-id=barelyfunctio-20&amp;hmac=CSwA656DPNJCCp%2Fi4C4wQDEx%2Bks%3D&amp;SubscriptionId=AKIAI7HDVG5KASF2ZHCA&amp;MergeCart=False</PurchaseURL>
         <SubTotal>
             <Amount>1299</Amount>
             <CurrencyCode>USD</CurrencyCode>
