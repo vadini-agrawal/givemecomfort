@@ -6,7 +6,7 @@
     <script src="script.js"></script>
     <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
     <script type="text/javascript">
-        txt ="<Cart>"+
+        /*txt ="<Cart>"+
         "<CartId>146-4953242-9766852</CartId>"+
         "<HMAC>CSwA656DPNJCCp/i4C4wQDEx+ks=</HMAC>"+
         "<PurchaseURL>https://www.amazon.com/gp/cart/aws-merge.html?cart-id=146-4953242-9766852&amp;associate-id=barelyfunctio-20&amp;hmac=CSwA656DPNJCCp%2Fi4C4wQDEx%2Bks%3D&amp;SubscriptionId=AKIAI7HDVG5KASF2ZHCA&amp;MergeCart=False</PurchaseURL>"+
@@ -25,9 +25,22 @@
         }
 
         document.getElementById("url").innerHTML=
-        xmlDoc.getElementsByTagName("PurchaseURL")[0].childNodes[0].nodeValue;
-
+        xmlDoc.getElementsByTagName("PurchaseURL")[0].childNodes[0].nodeValue; */
+        function myFunction(xml) {
+		  var x, xmlDoc, txt;
+		  xmlDoc = xml.xmldoc;
+		  txt = "";
+		  x = xmlDoc.getElementsByTagName("PurchaseURL");
+		  for (var i = 0, len = x.length; i < len; i++){
+		  	if (x[i] == "&"){
+		  		var res = str.replace("&", "&amp;");
+		  	}
+		  }
+		  txt = childNodes[0].nodeValue;
+		  document.getElementById("url").innerHTML = txt;
+		}
     </script>
+
 
   </head>
 
