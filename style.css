@@ -19,10 +19,13 @@ a.button {
   position: fixed; /* or absolute */    /* center the element */
   right: 0;
   left: 0;
-  margin-right: auto;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  /*margin-right: auto;
   margin-left: auto;
   margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: auto;*/
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
