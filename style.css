@@ -42,7 +42,7 @@ a.button {
   display: inline-block;
   vertical-align: middle;
   background-image: url("bokeh.jpg");
-  border-radius: 50px;
+  border-radius: 10000px;
   /*line-height: normal;*/
 }
 
