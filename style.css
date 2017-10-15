@@ -36,13 +36,13 @@ a.button {
   width: 400px;
   height: 300px;
   font-size: 40px;
+  border-radius: 200px;
   padding: 50px;
   text-align: center;
   line-height: 300px;
   display: inline-block;
   vertical-align: middle;
   background-image: url("bokeh.jpg");
-  border-radius: 10000px;
   /*line-height: normal;*/
 }
 
