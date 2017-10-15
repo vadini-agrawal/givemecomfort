@@ -35,13 +35,14 @@ a.button {
   color: initial;
   width: 400px;
   height: 300px;
-  font-size: 40px; 
+  font-size: 40px;
   padding: 50px;
   text-align: center;
   line-height: 300px;
   display: inline-block;
   vertical-align: middle;
   background-image: url("bokeh.jpg");
+  border-radius: 50px;
   /*line-height: normal;*/
 }
 
