@@ -7,14 +7,37 @@
     <!-- <script src="//code.jquery.com/jquery-1.10.1.min.js"></script> -->
     <p id="c"></p>
     <script type="text/javascript">
-        var url_string = "http://webservices.amazon.com/onca/xml?AWSAccessKeyId=AKIAJZM2YE25UECK34PQ&AssociateTag=barelyfunctio-20&Item.1.ASIN=B00I5HJ92K&Item.1.Quantity=1&Operation=CartCreate&ResponseGroup=Cart&Service=AWSECommerceService&Timestamp=2017-10-15T03%3A05%3A50.000Z&Signature=A1ezV%2F4HZ0R4pO%2Ff4gvPMnjw8%2BiJ13l3h334J3w%2B0gw%3D";
-        var url = new URL(url_string);
-        var c = url.searchParams.entries();
-        console.log(c);
 
+        function doIt() {
+            var url_string = "http://webservices.amazon.com/onca/xml?AWSAccessKeyId=AKIAJZM2YE25UECK34PQ&AssociateTag=barelyfunctio-20&Item.1.ASIN=B00I5HJ92K&Item.1.Quantity=1&Operation=CartCreate&ResponseGroup=Cart&Service=AWSECommerceService&Timestamp=2017-10-15T03%3A05%3A50.000Z&Signature=A1ezV%2F4HZ0R4pO%2Ff4gvPMnjw8%2BiJ13l3h334J3w%2B0gw%3D";
+            var url = new URL(url_string);
+            // var c = url.searchParams.entries();
+            console.log(c);
+            var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET", url, true);
+            xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+            xhttp.send();
+        }
         function myFunction(xml) {
+
+            // if (window.DOMParser)
+            //   {
+            //   parser=new DOMParser();
+            //   xmlDoc=parser.parseFromString(c,"text/xml");
+            //   }
+            // else // Internet Explorer
+            //   {
+            //   xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+            //   xmlDoc.async=false;
+            //   xmlDoc.loadXML(txt);
+            //   }
             var xmlDoc = xml.responseXML;
-            var x = xmlDoc.getElementsByTagName('PurchaseURL')[0];
+            var x = xmlDoc.getElementsByTagName("RequestID")[0];
             var y = x.childNodes[0];
             document.getElementById("c").innerHTML = y.nodeValue;
         }
@@ -32,12 +55,11 @@
         //   txt = childNodes[0].nodeValue;
         //   txt = document.getElementById("c").innerHTML;
         // }
-        // myFunction(c);
     </script>
   </head>
 
   <body>
-    <button class="makeMe"> Make Me Happy </button>
+    <button class="makeMe" onclick="doIt()"> Make Me Happy </button>
   </body>
 
 </html>
