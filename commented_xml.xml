@@ -3,7 +3,7 @@
     xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">"+
     "<OperationRequest>"+
         "<HTTPHeaders>"+
-            "<Header Name="UserAgent" Value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11. Safari/604.1.38/>"+
+            "<Header Name="UserAgent" Value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 \\Safari/604.1.38"/>+
         "</HTTPHeaders>"+
         "<RequestId>e139ecc8-be62-40fa-90e2-669cbbe12c2a</RequestId>"+
         "<Arguments>"+

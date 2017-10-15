@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="icon.png"/>
     <!-- <script src="//code.jquery.com/jquery-1.10.1.min.js"></script> -->
+    <p id="c"></p>
     <script type="text/javascript">
         var url_string = "http://webservices.amazon.com/onca/xml?AWSAccessKeyId=AKIAJZM2YE25UECK34PQ&AssociateTag=barelyfunctio-20&Item.1.ASIN=B00I5HJ92K&Item.1.Quantity=1&Operation=CartCreate&ResponseGroup=Cart&Service=AWSECommerceService&Timestamp=2017-10-15T03%3A05%3A50.000Z&Signature=A1ezV%2F4HZ0R4pO%2Ff4gvPMnjw8%2BiJ13l3h334J3w%2B0gw%3D";
         var url = new URL(url_string);
@@ -12,25 +13,30 @@
         console.log(c);
 
         function myFunction(xml) {
-          var x, xmlDoc, txt;
-          xmlDoc = xml.c;
-          txt = "";
-          x = xmlDoc.getElementsByTagName("<PurchaseURL>");
-          console.log(x);
-          // for (var i = 0, len = x.length; i < len; i++){
-          //   if (x[i] == "&"){
-          //       var res = x.replace("&", "&amp;");
-          //   }
-          // }
-          txt = childNodes[0].nodeValue;
-          document.getElementById("c").innerHTML = txt;
+            var xmlDoc = xml.responseXML;
+            var x = xmlDoc.getElementsByTagName('PurchaseURL')[0];
+            var y = x.childNodes[0];
+            document.getElementById("c").innerHTML = y.nodeValue;
         }
-        myFunction(c);
+        // function myFunction(xml) {
+        //   var x, xmlDoc, txt;
+        //   xmlDoc = xml.c;
+        //   txt = "";
+        //   x = txt.getElementsByTagName("PurchaseURL");
+        //   console.log(x);
+        //   // for (var i = 0, len = x.length; i < len; i++){
+        //   //   if (x[i] == "&"){
+        //   //       var res = x.replace("&", "&amp;");
+        //   //   }
+        //   // }
+        //   txt = childNodes[0].nodeValue;
+        //   txt = document.getElementById("c").innerHTML;
+        // }
+        // myFunction(c);
     </script>
   </head>
 
   <body>
-
     <button class="makeMe"> Make Me Happy </button>
   </body>
 
