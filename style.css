@@ -34,12 +34,7 @@ html {
 }
 
 .makeMe:hover {
-  -webkit-background-color: red;
-  -webkit-transition: .5s ease-in-out;
-  -moz-background-color: red;
-  -moz-transition: .5s ease-in-out;
-  -o-background-color: red;
-  -o-transition: .5s ease-in-out;
+  background-color: red;
   
 }
 
