@@ -16,11 +16,7 @@ div.thing {
   left: 0;
 }
 
-.button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  /*background-color: #FFFF66;*/
+.makeMe {
   position: absolute; /* or absolute */    /* center the element */
   right: 0;
   left: 0;
