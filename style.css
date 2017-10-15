@@ -7,15 +7,6 @@ html {
   background-size: cover;
 }
 
-div.thing {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color:#000;
-  top: 0;
-  left: 0;
-}
-
 .makeMe {
   position: absolute; /* or absolute */    /* center the element */
   right: 0;
