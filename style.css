@@ -11,14 +11,12 @@ html {
   position: absolute; /* or absolute */    /* center the element */
   right: 0;
   left: 0;
-  top: 180px;
-  bottom: 200px;
+  top: 0;
+  bottom: 0;
   margin-right: auto;
   margin-left: auto;
-  /*margin-right: auto;
-  margin-left: auto;
   margin-top: auto;
-  margin-bottom: auto;*/
+  margin-bottom: auto;
   text-decoration: none;
   background-color: #FFFF66;
   width: 400px;
