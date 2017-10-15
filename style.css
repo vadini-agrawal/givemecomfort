@@ -34,7 +34,8 @@ html {
 }
 
 .makeMe:hover {
-  background-color: red;
+  background-color: blue;
+  transition: 5s ease-in-out;
   
 }
 
