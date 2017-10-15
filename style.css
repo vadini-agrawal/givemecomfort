@@ -24,13 +24,11 @@ html {
   width: 400px;
   height: 300px;
   font-size: 40px;
-  padding: 50px;
   text-align: center;
-  line-height: 300px;
   display: inline-block;
   vertical-align: middle;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  border-radius: 30%;
+  border-radius: 40%;
   /*line-height: normal;*/
 }
 
