@@ -33,7 +33,14 @@ html {
   /*line-height: normal;*/
 }
 
-a.button:hover {
+.makeMe:hover {
+  -webkit-filter: grayscale(10%);
+  -webkit-transition: .5s ease-in-out;
+  -moz-filter: grayscale(10%);
+  -moz-transition: .5s ease-in-out;
+  -o-filter: grayscale(10%);
+  -o-transition: .5s ease-in-out;
+  
 }
 
 /*img:hover {
