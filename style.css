@@ -26,7 +26,7 @@ html {
   display: inline-block;
   vertical-align: middle;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  border-radius: 40%;
+  border-radius: 25px;
   /*background-image: url("bokeh.jpg");*/
   border-width: 0px;
   box-shadow: 5px 5px 5px #888888
@@ -34,11 +34,11 @@ html {
 }
 
 .makeMe:hover {
-  -webkit-filter: grayscale(10%);
+  -webkit-background-color: red;
   -webkit-transition: .5s ease-in-out;
-  -moz-filter: grayscale(10%);
+  -moz-background-color: red;
   -moz-transition: .5s ease-in-out;
-  -o-filter: grayscale(10%);
+  -o-background-color: red;
   -o-transition: .5s ease-in-out;
   
 }
