@@ -6,17 +6,16 @@
     <link rel="icon" type="image/png" href="icon.png"/>
     <!-- <script src="//code.jquery.com/jquery-1.10.1.min.js"></script> -->
     <script type="text/javascript">
-        var url_string = "http://webservices.amazon.com/onca/xml?AWSAccessKeyId=AKIAJZM2YE25UECK34PQ&AssociateTag=barelyfunctio-20&Item.1.ASIN=B015ZAH5EI&Item.1.Quantity=1&Operation=CartCreate&ResponseGroup=Cart&Service=AWSECommerceService&Timestamp=2017-10-15T01%3A06%3A21.000Z&Signature=EuJua1vb8Q5UBjaw3vZ8XpqMYrk0Zh4fSL29PjANaSY%3D";
+        var url_string = "http://webservices.amazon.com/onca/xml?AWSAccessKeyId=AKIAJZM2YE25UECK34PQ&AssociateTag=barelyfunctio-20&Item.1.ASIN=B00I5HJ92K&Item.1.Quantity=1&Operation=CartCreate&ResponseGroup=Cart&Service=AWSECommerceService&Timestamp=2017-10-15T03%3A05%3A50.000Z&Signature=A1ezV%2F4HZ0R4pO%2Ff4gvPMnjw8%2BiJ13l3h334J3w%2B0gw%3D";
         var url = new URL(url_string);
-        var c = url.searchParams.get("c");
+        var c = url.searchParams.entries();
         console.log(c);
-        myFunction(c);
 
         function myFunction(xml) {
           var x, xmlDoc, txt;
           xmlDoc = xml.c;
           txt = "";
-          x = xmlDoc.getElementsByTagName("PurchaseURL");
+          x = xmlDoc.getElementsByTagName("<PurchaseURL>");
           console.log(x);
           // for (var i = 0, len = x.length; i < len; i++){
           //   if (x[i] == "&"){
@@ -26,10 +25,12 @@
           txt = childNodes[0].nodeValue;
           document.getElementById("c").innerHTML = txt;
         }
+        myFunction(c);
     </script>
   </head>
 
   <body>
+
     <button class="makeMe"> Make Me Happy </button>
   </body>
 
