@@ -17,7 +17,7 @@
             <Argument Name="Timestamp" Value="2017-10-14T18:03:00.000Z"/>
             <Argument Name="Signature" Value="oEG+M3+gaOfi4Bt43m+pTuQQoEYeX8XRaHkIgfnvmMI="/>
         </Arguments>
-        <RequestProcessingTime>0.13977952</RequestProcessingTime>
+        <RequestProcessingTime>0.15956128</RequestProcessingTime>
     </OperationRequest>
     <Cart>
         <Request>
@@ -25,44 +25,44 @@
             <CartCreateRequest>
                 <Items>
                     <Item>
-                        <ASIN>B01MUBHWKW</ASIN>
+                        <ASIN>B016VB3NTQ</ASIN>
                         <Quantity>1</Quantity>
                     </Item>
                 </Items>
                 <ResponseGroup>Cart</ResponseGroup>
             </CartCreateRequest>
         </Request>
-        <CartId>146-4953242-9766852</CartId>
-        <HMAC>CSwA656DPNJCCp/i4C4wQDEx+ks=</HMAC>
-        <URLEncodedHMAC>CSwA656DPNJCCp%2Fi4C4wQDEx%2Bks%3D</URLEncodedHMAC>
-        <PurchaseURL>https://www.amazon.com/gp/cart/aws-merge.html?cart-id=146-4953242-9766852&associate-id=barelyfunctio-20&hmac=CSwA656DPNJCCp%2Fi4C4wQDEx%2Bks%3D&SubscriptionId=AKIAI7HDVG5KASF2ZHCA&MergeCart=False</PurchaseURL>
+        <CartId>137-7267232-7392662</CartId>
+        <HMAC>vHF0qKkIXTF7a9eGQAg1zrDtQq0=</HMAC>
+        <URLEncodedHMAC>vHF0qKkIXTF7a9eGQAg1zrDtQq0%3D</URLEncodedHMAC>
+        <PurchaseURL>https://www.amazon.com/gp/cart/aws-merge.html?cart-id=137-7267232-7392662&amp;associate-id=barelyfunctio-20&amp;hmac=vHF0qKkIXTF7a9eGQAg1zrDtQq0%3D&amp;SubscriptionId=AKIAJZM2YE25UECK34PQ&amp;MergeCart=False</PurchaseURL>
         <SubTotal>
-            <Amount>1299</Amount>
+            <Amount>3999</Amount>
             <CurrencyCode>USD</CurrencyCode>
-            <FormattedPrice>$12.99</FormattedPrice>
+            <FormattedPrice>$39.99</FormattedPrice>
         </SubTotal>
         <CartItems>
             <SubTotal>
-                <Amount>1299</Amount>
+                <Amount>3999</Amount>
                 <CurrencyCode>USD</CurrencyCode>
-                <FormattedPrice>$12.99</FormattedPrice>
+                <FormattedPrice>$39.99</FormattedPrice>
             </SubTotal>
             <CartItem>
-                <CartItemId>C1KEJF7Z0FOXA8</CartItemId>
-                <ASIN>B01MUBHWKW</ASIN>
-                <SellerNickname>Russell Stover Chocolates</SellerNickname>
+                <CartItemId>CKQ31QR6RVOL6</CartItemId>
+                <ASIN>B016VB3NTQ</ASIN>
+                <SellerNickname>Amazon.com</SellerNickname>
                 <Quantity>1</Quantity>
-                <Title>Russell Stover Milk Chocolate Assortment, 16 oz. Box</Title>
-                <ProductGroup>Grocery</ProductGroup>
+                <Title>Orla Kiely Cell Phone Case for iPhone 6/6s Plus - Elephant &amp; Stem Tulip</Title>
+                <ProductGroup>Wireless</ProductGroup>
                 <Price>
-                    <Amount>1299</Amount>
+                    <Amount>3999</Amount>
                     <CurrencyCode>USD</CurrencyCode>
-                    <FormattedPrice>$12.99</FormattedPrice>
+                    <FormattedPrice>$39.99</FormattedPrice>
                 </Price>
                 <ItemTotal>
-                    <Amount>1299</Amount>
+                    <Amount>3999</Amount>
                     <CurrencyCode>USD</CurrencyCode>
-                    <FormattedPrice>$12.99</FormattedPrice>
+                    <FormattedPrice>$39.99</FormattedPrice>
                 </ItemTotal>
             </CartItem>
         </CartItems>

@@ -3,26 +3,66 @@
 
   <head>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link rel="icon" type="image/png" href="icon.png"/>
+    <!-- <script src="//code.jquery.com/jquery-1.10.1.min.js"></script> -->
+    <p id="c"></p>
     <script type="text/javascript">
-        var parser, xmldoc;
-        var text = "AWSAccessKeyId"
+
+        function doIt() {
+            var url_string = "https://webservices.amazon.com/onca/xml?AWSAccessKeyId=AKIAJZM2YE25UECK34PQ&AssociateTag=barelyfunctio-20&Item.1.ASIN=B01JIEBZZC&Item.1.Quantity=1&Operation=CartCreate&ResponseGroup=Cart&Service=AWSECommerceService&Timestamp=2017-10-15T04%3A51%3A32.000Z&Signature=%2BVSqLGRrKKFLn0vWBtEICXmy6Z%2Bzz81J9%2B5smTtGgA4%3D";
+            var url = new URL(url_string);
+            // var c = url.searchParams.entries();
+            console.log(c);
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this);
+                    myFunction(this);
+                } else {
+                    console.log(this);
+                }
+            };
+            xhttp.open("GET", url, true);
+            // xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+            xhttp.send();
+        }
+        function myFunction(xml) {
+
+            // if (window.DOMParser)
+            //   {
+            //   parser=new DOMParser();
+            //   xmlDoc=parser.parseFromString(c,"text/xml");
+            //   }
+            // else // Internet Explorer
+            //   {
+            //   xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+            //   xmlDoc.async=false;
+            //   xmlDoc.loadXML(txt);
+            //   }
+            var xmlDoc = xml.responseXML;
+            var x = xmlDoc.getElementsByTagName("RequestID")[0];
+            var y = x.childNodes[0];
+            document.getElementById("c").innerHTML = y.nodeValue;
+        }
+        // function myFunction(xml) {
+        //   var x, xmlDoc, txt;
+        //   xmlDoc = xml.c;
+        //   txt = "";
+        //   x = txt.getElementsByTagName("PurchaseURL");
+        //   console.log(x);
+        //   // for (var i = 0, len = x.length; i < len; i++){
+        //   //   if (x[i] == "&"){
+        //   //       var res = x.replace("&", "&amp;");
+        //   //   }
+        //   // }
+        //   txt = childNodes[0].nodeValue;
+        //   txt = document.getElementById("c").innerHTML;
+        // }
     </script>
   </head>
 
   <body>
-    <h1>Comforts!!!</h1>
-    <p>This website will make you happy!</p>
-    <div class="bg"></div>
-
- 	<a href="https://www.amazon.com/gp/cart/aws-merge.html?cart-id=146-4953242-9766852&associate-id=barelyfunctio-20&hmac=CSwA656DPNJCCp%2Fi4C4wQDEx%2Bks%3D&SubscriptionId=AKIAI7HDVG5KASF2ZHCA&MergeCart=False" class="button"> Make Me Happy </a>
-
-
-    <!--img class = "demo" src = "sadwater.jpeg" alt = "raindrop" style="background-image:url(sadwater.jpeg)" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script src="js/jquery.ripples.js"></script> -->
-
+    <button class="makeMe" onclick="doIt()"> Make Me Happy </button>
   </body>
 
 </html>
