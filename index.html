@@ -2,135 +2,35 @@
 <html>
 
   <head>
-  <title> Make Me Happy </title> 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="icon.png"/>
-    <script src="script.js"></script>
-    <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!-- <script src="//code.jquery.com/jquery-1.10.1.min.js"></script> -->
     <script type="text/javascript">
-        /*txt ="<Cart>"+
-        "<CartId>146-4953242-9766852</CartId>"+
-        "<HMAC>CSwA656DPNJCCp/i4C4wQDEx+ks=</HMAC>"+
-        "<PurchaseURL>https://www.amazon.com/gp/cart/aws-merge.html?cart-id=146-4953242-9766852&amp;associate-id=barelyfunctio-20&amp;hmac=CSwA656DPNJCCp%2Fi4C4wQDEx%2Bks%3D&amp;SubscriptionId=AKIAI7HDVG5KASF2ZHCA&amp;MergeCart=False</PurchaseURL>"+
-        "</Cart>";
+        var url_string = "http://webservices.amazon.com/onca/xml?AWSAccessKeyId=AKIAJZM2YE25UECK34PQ&AssociateTag=barelyfunctio-20&Item.1.ASIN=B015ZAH5EI&Item.1.Quantity=1&Operation=CartCreate&ResponseGroup=Cart&Service=AWSECommerceService&Timestamp=2017-10-15T01%3A06%3A21.000Z&Signature=EuJua1vb8Q5UBjaw3vZ8XpqMYrk0Zh4fSL29PjANaSY%3D";
+        var url = new URL(url_string);
+        var c = url.searchParams.get("c");
+        console.log(c);
+        myFunction(c);
 
-        if (window.DOMParser)
-        {
-        parser=new DOMParser();
-        xmldoc=parser.parseFromString(txt,"text/xml");
+        function myFunction(xml) {
+          var x, xmlDoc, txt;
+          xmlDoc = xml.c;
+          txt = "";
+          x = xmlDoc.getElementsByTagName("PurchaseURL");
+          console.log(x);
+          // for (var i = 0, len = x.length; i < len; i++){
+          //   if (x[i] == "&"){
+          //       var res = x.replace("&", "&amp;");
+          //   }
+          // }
+          txt = childNodes[0].nodeValue;
+          document.getElementById("c").innerHTML = txt;
         }
-        else // Internet Explorer
-        {
-        xmldoc=new ActiveXObject("Microsoft.XMLDOM");
-        xmldoc.async=false;
-        xmldoc.loadXML(txt);
-        }
-
-        document.getElementById("url").innerHTML=
-        xmlDoc.getElementsByTagName("PurchaseURL")[0].childNodes[0].nodeValue; */
-
     </script>
-
-
   </head>
 
   <body>
-    <p id="url"></p>
-    <script type="text/javascript">
-        // function myFunction(xml) {
-        //   var x, xmlDoc, txt;
-        //   xmlDoc = xml.xmldoc;
-        //   txt = "";
-        //   x = xmlDoc.getElementsByTagName("PurchaseURL");
-        //   for (var i = 0, len = x.length; i < len; i++){
-        //     if (x[i] == "&"){
-        //         var res = x.replace("&", "&amp;");
-        //     }
-        //   }
-        //   txt = childNodes[0].nodeValue;
-        //   document.getElementById("url").innerHTML = txt;
-        // }
-        txt ="<CartCreateResponse xmlns=http://webservices.amazon.com/AWSECommerceService/2011-08-01>"+
-        "<OperationRequest>"+
-            "<HTTPHeaders>"+
-            "</HTTPHeaders>"+
-            "<RequestId>e139ecc8-be62-40fa-90e2-669cbbe12c2a</RequestId>"+
-            "<Arguments>"+
-            "</Arguments>"+
-            "<RequestProcessingTime>0.13977952</RequestProcessingTime>"+
-        "</OperationRequest>"+
-        "<Cart>"+
-            "<Request>"+
-                "<IsValid>True</IsValid>"+
-                "<CartCreateRequest>"+
-                    "<Items>"+
-                        "<Item>"+
-                            "<ASIN>B01MUBHWKW</ASIN>"+
-                            "<Quantity>1</Quantity>"+
-                        "</Item>"+
-                    "</Items>"+
-                    "<ResponseGroup>Cart</ResponseGroup>"+
-                "</CartCreateRequest>"+
-            "</Request>"+
-            "<CartId>146-4953242-9766852</CartId>"+
-            "<HMAC>CSwA656DPNJCCp/i4C4wQDEx+ks=</HMAC>"+
-            "<URLEncodedHMAC>CSwA656DPNJCCp%2Fi4C4wQDEx%2Bks%3D</URLEncodedHMAC>"+
-            "<PurchaseURL>https://www.amazon.com/gp/cart/aws-merge.html?cart-id=146-4953242-9766852&amp;associate-id=barelyfunctio-20&amp;hmac=CSwA656DPNJCCp%2Fi4C4wQDEx%2Bks%3D&amp;SubscriptionId=AKIAI7HDVG5KASF2ZHCA&amp;MergeCart=False</PurchaseURL>"+
-            "<SubTotal>"+
-                "<Amount>1299</Amount>"+
-                "<CurrencyCode>USD</CurrencyCode>"+
-                "<FormattedPrice>$12.99</FormattedPrice>"+
-            "</SubTotal>"+
-            "<CartItems>"+
-               "<SubTotal>"+
-                    "<Amount>1299</Amount>"+
-                    "<CurrencyCode>USD</CurrencyCode>"+
-                    "<FormattedPrice>$12.99</FormattedPrice>"+
-                "</SubTotal>"+
-                "<CartItem>"+
-                    "<CartItemId>C1KEJF7Z0FOXA8</CartItemId>"+
-                    "<ASIN>B01MUBHWKW</ASIN>"+
-                    "<SellerNickname>Russell Stover Chocolates</SellerNickname>"+
-                    "<Quantity>1</Quantity>"+
-                    "<Title>Russell Stover Milk Chocolate Assortment, 16 oz. Box</Title>"+
-                    "<ProductGroup>Grocery</ProductGroup>"+
-                    "<Price>"+
-                        "<Amount>1299</Amount>"+
-                        "<CurrencyCode>USD</CurrencyCode>"+
-                        "<FormattedPrice>$12.99</FormattedPrice>"+
-                    "</Price>"+
-                    "<ItemTotal>"+
-                        "<Amount>1299</Amount>"+
-                        "<CurrencyCode>USD</CurrencyCode>"+
-                        "<FormattedPrice>$12.99</FormattedPrice>"+
-                    "</ItemTotal>"+
-                "</CartItem>"+
-            "</CartItems>"+
-        "</Cart>"+
-    "</CartCreateResponse>";
-
-    if (window.DOMParser)
-    {
-    parser=new DOMParser();
-    xmldoc=parser.parseFromString(txt,"text/xml");
-    }
-    else // Internet Explorer
-    {
-    xmldoc=new ActiveXObject("Microsoft.XMLDOM");
-    xmldoc.async=false;
-    xmldoc.loadXML(txt);
-    }
-
-    document.getElementById("url").innerHTML = xmlDoc.getElementsByTagName("PurchaseURL")[0].childNodes[0].nodeValue;
-    </script>
-
- 	<button class="makeMe"> Make Me Happy </button>
-
-
-    <!--img class = "demo" src = "sadwater.jpeg" alt = "raindrop" style="background-image:url(sadwater.jpeg)" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script src="js/jquery.ripples.js"></script> -->
-
+    <button class="makeMe"> Make Me Happy </button>
   </body>
 
 </html>
