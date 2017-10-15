@@ -27,11 +27,11 @@ html {
   vertical-align: middle;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   border-radius: 40%;
+  background-image: url("bokeh.jpg");
   /*line-height: normal;*/
 }
 
 a.button:hover {
-
 }
 
 /*img:hover {
