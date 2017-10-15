@@ -46,12 +46,6 @@ a.button {
   /*line-height: normal;*/
 }
 
-/*Simple reset*/
- * {
-    margin: 0;
-    padding: 0;
-}
-
 
 /*img:hover {
   -webkit-filter: grayscale(0%);
