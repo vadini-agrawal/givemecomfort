@@ -33,7 +33,8 @@ div.thing {
   margin-top: auto;
   margin-bottom: auto;*/
   text-decoration: none;
-  color: #FFFF66;
+  color: black;
+  background-color: #FFFF66;
   width: 400px;
   height: 300px;
   font-size: 40px;
