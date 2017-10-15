@@ -21,7 +21,7 @@ a.button {
   -moz-appearance: button;
   appearance: button;
   /*background-color: #FFFF66;*/
-  position: fixed; /* or absolute */    /* center the element */
+  position: absolute; /* or absolute */    /* center the element */
   right: 0;
   left: 0;
   top: 180px;
