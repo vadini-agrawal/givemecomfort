@@ -16,7 +16,7 @@ div.thing {
   left: 0;
 }
 
-a.button {
+.button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
@@ -33,7 +33,7 @@ a.button {
   margin-top: auto;
   margin-bottom: auto;*/
   text-decoration: none;
-  color: initial;
+  color: #FFFF66;
   width: 400px;
   height: 300px;
   font-size: 40px;
@@ -49,7 +49,7 @@ a.button {
 }
 
 a.button:hover {
-  background-color: red;
+
 }
 
 /*img:hover {
